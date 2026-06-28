@@ -1,0 +1,161 @@
+/*====================================================
+FOOTER ENTERPRISE — NEXORA
+====================================================*/
+
+.footer{
+  position:relative;
+  overflow:hidden;
+  padding:86px 0 28px;
+  border-top:1px solid rgba(255,255,255,.08);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(30,136,255,.15), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgba(124,58,237,.12), transparent 24%),
+    linear-gradient(180deg, rgba(5,8,22,.92), rgba(2,4,12,.98));
+}
+
+.footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.023) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.023) 1px, transparent 1px);
+  background-size:86px 86px;
+  opacity:.42;
+  pointer-events:none;
+}
+
+.footer::after{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  width:72%;
+  height:1px;
+  transform:translateX(-50%);
+  background:linear-gradient(90deg, transparent, rgba(30,136,255,.62), rgba(124,58,237,.42), transparent);
+  box-shadow:0 0 34px rgba(30,136,255,.35);
+}
+
+.footer-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:1.5fr repeat(4, .75fr);
+  gap:42px;
+  padding-bottom:52px;
+}
+
+.footer-brand{
+  max-width:390px;
+}
+
+.footer-logo{
+  width:138px;
+  height:auto;
+  margin-bottom:22px;
+  filter:drop-shadow(0 0 20px rgba(30,136,255,.28));
+}
+
+.footer-tagline{
+  margin-bottom:14px;
+  color:var(--nx-white);
+  font-size:20px;
+  font-weight:800;
+}
+
+.footer-description{
+  max-width:360px;
+  margin-bottom:24px;
+  color:var(--nx-text-light);
+  font-size:15px;
+  line-height:1.75;
+}
+
+.footer-badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.footer-badges span{
+  padding:7px 10px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:999px;
+  background:rgba(255,255,255,.045);
+  color:var(--nx-text-light);
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+}
+
+.footer-column h4{
+  margin-bottom:18px;
+  color:var(--nx-white);
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.footer-column a{
+  display:block;
+  width:max-content;
+  margin-bottom:12px;
+  color:var(--nx-text-light);
+  font-size:14px;
+  transition:var(--transition);
+}
+
+.footer-column a:hover{
+  color:var(--nx-white);
+  transform:translateX(4px);
+}
+
+.footer-bottom{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+  padding-top:26px;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+
+.footer-bottom p{
+  color:var(--nx-text-light);
+  font-size:13px;
+  line-height:1.6;
+}
+
+/*====================================================
+FOOTER RESPONSIVE
+====================================================*/
+
+@media (max-width:1100px){
+  .footer-grid{
+    grid-template-columns:1.2fr repeat(2, 1fr);
+  }
+}
+
+@media (max-width:760px){
+  .footer{
+    padding:64px 0 28px;
+  }
+
+  .footer-grid{
+    grid-template-columns:1fr;
+    gap:34px;
+  }
+
+  .footer-column a{
+    width:100%;
+  }
+
+  .footer-bottom{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+}

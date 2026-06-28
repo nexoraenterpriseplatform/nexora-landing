@@ -1,0 +1,66 @@
+/*====================================================
+CARDS — NEXORA GLASS SYSTEM
+====================================================*/
+
+.cards-grid{
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  gap:18px;
+}
+
+.feature-card{
+  position:relative;
+  overflow:hidden;
+  min-height:245px;
+  padding:28px 22px;
+  border-radius:26px;
+  border:1px solid rgba(255,255,255,.09);
+  background:var(--gradient-card);
+  backdrop-filter:blur(16px);
+  box-shadow:var(--shadow-card);
+  transition:var(--transition);
+}
+
+.feature-card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 30% 0%, rgba(30,136,255,.16), transparent 32%),
+    linear-gradient(120deg, rgba(255,255,255,.045), transparent 42%);
+  opacity:0;
+  transition:var(--transition);
+  pointer-events:none;
+}
+
+.feature-card:hover{
+  transform:translateY(-8px);
+  background:rgba(30,136,255,.075);
+  border-color:rgba(30,136,255,.35);
+  box-shadow:0 0 60px rgba(30,136,255,.16);
+}
+
+.feature-card:hover::before{
+  opacity:1;
+}
+
+.feature-card span{
+  position:relative;
+  display:block;
+  margin-bottom:28px;
+  color:var(--nx-primary-light);
+  font-weight:900;
+  letter-spacing:.1em;
+}
+
+.feature-card h3{
+  position:relative;
+  margin-bottom:14px;
+  font-size:20px;
+}
+
+.feature-card p{
+  position:relative;
+  font-size:15px;
+  line-height:1.65;
+}

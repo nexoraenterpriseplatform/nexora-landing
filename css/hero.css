@@ -1,0 +1,720 @@
+/*=========================================
+ HERO — NEXORA PREMIUM
+=========================================*/
+
+.hero{
+  min-height:100vh;
+  padding-top:112px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  overflow:hidden;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 74% 48%, rgba(30,136,255,.30), transparent 28%),
+    radial-gradient(circle at 82% 18%, rgba(124,58,237,.20), transparent 25%),
+    radial-gradient(circle at 18% 22%, rgba(30,136,255,.14), transparent 26%);
+  pointer-events:none;
+}
+
+.hero::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.028) 1px, transparent 1px);
+  background-size:78px 78px;
+  mask-image:linear-gradient(to bottom, black, transparent 82%);
+  pointer-events:none;
+}
+
+/*=========================================
+ DIGITAL FLOW
+=========================================*/
+
+.digital-flow span{
+  position:absolute;
+  width:4px;
+  height:4px;
+  border-radius:50%;
+  background:var(--nx-primary-light);
+  box-shadow:0 0 24px var(--nx-primary);
+  opacity:.55;
+}
+
+.digital-flow span:nth-child(1){
+  top:22%;
+  left:18%;
+  animation:pulse 4s infinite;
+}
+
+.digital-flow span:nth-child(2){
+  top:36%;
+  left:62%;
+  animation:pulse 5s infinite;
+}
+
+.digital-flow span:nth-child(3){
+  top:68%;
+  left:78%;
+  animation:pulse 4.6s infinite;
+}
+
+.digital-flow span:nth-child(4){
+  top:74%;
+  left:28%;
+  animation:pulse 5.4s infinite;
+}
+
+.digital-flow span:nth-child(5){
+  top:18%;
+  left:86%;
+  animation:pulse 4.8s infinite;
+}
+
+/*=========================================
+ HERO GRID
+=========================================*/
+
+.hero-grid{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:.92fr 1.08fr;
+  gap:90px;
+  align-items:center;
+}
+
+.hero-content{
+  max-width:700px;
+}
+
+.hero-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  margin-bottom:26px;
+  padding:10px 18px;
+  border:1px solid rgba(30,136,255,.36);
+  border-radius:999px;
+  background:rgba(30,136,255,.08);
+  color:var(--nx-primary-light);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+  box-shadow:0 0 24px rgba(30,136,255,.12);
+}
+
+.hero-tag::before{
+  content:"";
+  width:8px;
+  height:8px;
+  border-radius:50%;
+  background:var(--nx-primary);
+  box-shadow:0 0 18px var(--nx-primary);
+}
+
+/*=========================================
+ BUILD STATUS
+=========================================*/
+
+.build-status{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  width:max-content;
+  margin-bottom:22px;
+  padding:8px 12px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:999px;
+  background:rgba(255,255,255,.045);
+  backdrop-filter:blur(14px);
+}
+
+.build-status span,
+.build-status strong{
+  font-size:11px;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.build-status span{
+  color:var(--nx-primary-light);
+}
+
+.build-status strong{
+  color:var(--nx-text-light);
+}
+
+.build-bar{
+  width:84px;
+  height:5px;
+  overflow:hidden;
+  border-radius:999px;
+  background:rgba(255,255,255,.10);
+}
+
+.build-bar i{
+  display:block;
+  width:88%;
+  height:100%;
+  border-radius:999px;
+  background:var(--gradient-primary);
+  box-shadow:0 0 18px rgba(30,136,255,.55);
+}
+
+/*=========================================
+ HERO TEXT
+=========================================*/
+
+.hero h1{
+  margin-bottom:30px;
+}
+
+.hero h1 span{
+  display:block;
+  margin-top:10px;
+}
+
+.hero p{
+  max-width:640px;
+  margin-bottom:40px;
+  font-size:20px;
+  color:#B7C2D6;
+}
+
+.hero-actions{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:36px;
+}
+
+/*=========================================
+ BUTTONS
+=========================================*/
+
+.btn{
+  position:relative;
+  overflow:hidden;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:56px;
+  padding:0 26px;
+  border-radius:999px;
+  font-size:15px;
+  font-weight:900;
+  transition:var(--transition);
+}
+
+.btn::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:80%;
+  height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.35), transparent);
+  transform:skewX(-18deg);
+  transition:.7s ease;
+}
+
+.btn:hover::after{
+  left:130%;
+}
+
+.btn-primary{
+  color:var(--nx-white);
+  background:var(--gradient-primary);
+  box-shadow:0 0 38px rgba(30,136,255,.38);
+}
+
+.btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 0 58px rgba(30,136,255,.62);
+}
+
+.btn-secondary{
+  color:var(--nx-white);
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.055);
+  backdrop-filter:blur(14px);
+}
+
+.btn-secondary:hover{
+  border-color:rgba(30,136,255,.50);
+  background:rgba(30,136,255,.12);
+}
+
+/*=========================================
+ HERO META
+=========================================*/
+
+.hero-meta{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.hero-meta span{
+  padding:8px 13px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+  color:var(--nx-text-light);
+  font-size:12px;
+  font-weight:700;
+}
+
+/*=========================================
+ HERO PROOF
+=========================================*/
+
+.hero-proof{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:24px;
+  max-width:680px;
+}
+
+.hero-proof div{
+  padding:16px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:18px;
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(14px);
+}
+
+.hero-proof strong{
+  display:block;
+  margin-bottom:6px;
+  color:var(--nx-white);
+  font-size:13px;
+}
+
+.hero-proof span{
+  color:var(--nx-text-light);
+  font-size:12px;
+  line-height:1.5;
+}
+
+/*=========================================
+ HERO VISUAL / ORB
+=========================================*/
+
+.hero-visual{
+  position:relative;
+  min-height:590px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.hero-visual::before{
+  content:"";
+  position:absolute;
+  width:680px;
+  height:680px;
+  border-radius:50%;
+  background:
+    radial-gradient(circle, rgba(30,136,255,.16), transparent 58%),
+    conic-gradient(from 180deg, transparent, rgba(30,136,255,.22), transparent, rgba(124,58,237,.20), transparent);
+  filter:blur(4px);
+  animation:spin 28s linear infinite;
+}
+
+.orb{
+  position:relative;
+  width:460px;
+  height:460px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle, rgba(30,136,255,.24), transparent 54%),
+    radial-gradient(circle at 40% 35%, rgba(255,255,255,.18), transparent 16%);
+  box-shadow:
+    0 0 95px rgba(30,136,255,.28),
+    inset 0 0 85px rgba(30,136,255,.12);
+}
+
+.orb::before{
+  content:"";
+  position:absolute;
+  width:545px;
+  height:545px;
+  border-radius:50%;
+  background:
+    conic-gradient(
+      from 120deg,
+      transparent,
+      rgba(30,136,255,.36),
+      transparent,
+      rgba(124,58,237,.34),
+      transparent
+    );
+  filter:blur(20px);
+  animation:spin 16s linear infinite;
+}
+
+.orb::after{
+  content:"";
+  position:absolute;
+  inset:42px;
+  border-radius:50%;
+  border:1px solid rgba(255,255,255,.08);
+  background:
+    linear-gradient(90deg, transparent 49%, rgba(255,255,255,.08) 50%, transparent 51%),
+    linear-gradient(0deg, transparent 49%, rgba(255,255,255,.08) 50%, transparent 51%);
+  opacity:.38;
+}
+
+.orb-ring{
+  position:absolute;
+  border-radius:50%;
+  border:1px solid rgba(30,136,255,.34);
+  box-shadow:0 0 34px rgba(30,136,255,.18);
+}
+
+.ring-1{
+  width:100%;
+  height:100%;
+  animation:spin 20s linear infinite;
+}
+
+.ring-2{
+  width:78%;
+  height:78%;
+  transform:rotateX(62deg);
+  animation:spinReverse 14s linear infinite;
+}
+
+.ring-3{
+  width:58%;
+  height:58%;
+  transform:rotateY(62deg);
+  animation:spin 11s linear infinite;
+}
+
+.orb-core{
+  position:relative;
+  z-index:3;
+  width:140px;
+  height:140px;
+  border-radius:36px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(135deg, rgba(255,255,255,.30), rgba(30,136,255,.27), rgba(124,58,237,.18));
+  border:1px solid rgba(255,255,255,.20);
+  box-shadow:
+    0 0 54px rgba(30,136,255,.46),
+    inset 0 0 34px rgba(255,255,255,.14);
+}
+
+.orb-core img{
+  width:112px;
+  height:auto;
+  filter:drop-shadow(0 0 18px rgba(30,136,255,.55));
+}
+
+/*=========================================
+ FLOATING CARDS
+=========================================*/
+
+.floating-card{
+  position:absolute;
+  width:260px;
+  padding:18px;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.11);
+  background:rgba(9,17,31,.74);
+  backdrop-filter:blur(18px);
+  box-shadow:var(--shadow-card);
+}
+
+.floating-card span{
+  display:block;
+  margin-bottom:8px;
+  color:var(--nx-primary-light);
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+.floating-card strong{
+  color:var(--nx-white);
+  font-size:16px;
+}
+
+.card-top{
+  top:72px;
+  right:10px;
+  animation:float 5s ease-in-out infinite;
+}
+
+.card-bottom{
+  bottom:78px;
+  left:0;
+  animation:float 5.8s ease-in-out infinite;
+}
+
+
+
+/*====================================================
+RELEASE 0.9.1 — HERO FINAL REFINEMENTS
+====================================================*/
+
+.hero-proof div{
+  position:relative;
+  overflow:hidden;
+}
+
+.hero-proof div::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(135deg, rgba(30,136,255,.12), transparent 48%);
+  opacity:0;
+  transition:var(--transition);
+}
+
+.hero-proof div:hover::before{
+  opacity:1;
+}
+
+.hero-proof strong,
+.hero-proof span{
+  position:relative;
+  z-index:2;
+}
+
+.orb{
+  animation:orbBreath 7s ease-in-out infinite;
+}
+
+@keyframes orbBreath{
+  0%,100%{
+    transform:scale(1);
+    filter:saturate(1);
+  }
+
+  50%{
+    transform:scale(1.025);
+    filter:saturate(1.12);
+  }
+}
+
+
+/*====================================================
+RELEASE 0.9.4 — HERO 2.0 ORBIT CAPABILITIES
+====================================================*/
+
+.orb-core{
+  flex-direction:column;
+  gap:8px;
+}
+
+.orb-core span{
+  display:block;
+  color:rgba(248,250,252,.78);
+  font-size:10px;
+  font-weight:900;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  text-align:center;
+  text-shadow:0 0 18px rgba(30,136,255,.45);
+}
+
+.orbit-card{
+  width:238px;
+  min-height:92px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  transform-origin:center;
+}
+
+.orbit-card::after{
+  content:"";
+  position:absolute;
+  width:42px;
+  height:1px;
+  background:linear-gradient(90deg, rgba(30,136,255,.42), transparent);
+  opacity:.55;
+}
+
+.card-analytics{
+  top:42px;
+  left:48px;
+  animation:float 5.2s ease-in-out infinite;
+}
+
+.card-analytics::after{
+  right:-38px;
+  top:50%;
+}
+
+.card-intelligence{
+  top:48px;
+  right:0;
+  animation:float 5.6s ease-in-out infinite;
+}
+
+.card-intelligence::after{
+  left:-38px;
+  top:50%;
+  transform:rotate(180deg);
+}
+
+.card-knowledge{
+  top:254px;
+  left:-24px;
+  animation:float 6s ease-in-out infinite;
+}
+
+.card-knowledge::after{
+  right:-38px;
+  top:50%;
+}
+
+.card-decision{
+  top:268px;
+  right:-30px;
+  animation:float 5.8s ease-in-out infinite;
+}
+
+.card-decision::after{
+  left:-38px;
+  top:50%;
+  transform:rotate(180deg);
+}
+
+.card-automation{
+  bottom:54px;
+  left:70px;
+  animation:float 6.4s ease-in-out infinite;
+}
+
+.card-automation::after{
+  right:-38px;
+  top:50%;
+}
+
+.card-twin{
+  bottom:54px;
+  right:42px;
+  animation:float 6.2s ease-in-out infinite;
+}
+
+.card-twin::after{
+  left:-38px;
+  top:50%;
+  transform:rotate(180deg);
+}
+
+.orbit-card:nth-of-type(2){
+  animation-delay:.2s;
+}
+
+.orbit-card:nth-of-type(3){
+  animation-delay:.5s;
+}
+
+.orbit-card:nth-of-type(4){
+  animation-delay:.8s;
+}
+
+.orbit-card:nth-of-type(5){
+  animation-delay:1.1s;
+}
+
+.orbit-card:nth-of-type(6){
+  animation-delay:1.4s;
+}
+
+@media (max-width:1180px){
+  .orbit-card{
+    width:218px;
+  }
+
+  .card-analytics,
+  .card-knowledge,
+  .card-automation{
+    left:0;
+  }
+
+  .card-intelligence,
+  .card-decision,
+  .card-twin{
+    right:0;
+  }
+}
+
+@media (max-width:980px){
+  .card-analytics,
+  .card-automation{
+    display:none;
+  }
+
+  .card-knowledge{
+    left:18px;
+  }
+
+  .card-decision{
+    right:18px;
+  }
+}
+
+
+/*====================================================
+RELEASE 1.0 RC1 — HERO FREEZE POLISH
+====================================================*/
+
+.orb-core{
+  animation:coreBreath 6.5s ease-in-out infinite;
+}
+
+.orbit-card{
+  transition:transform .35s ease, border-color .35s ease, box-shadow .35s ease, background .35s ease;
+}
+
+.orbit-card:hover{
+  transform:translateY(-6px);
+  border-color:rgba(72,167,255,.42);
+  box-shadow:0 0 42px rgba(30,136,255,.18), var(--shadow-card);
+}
+
+.card-intelligence,
+.card-decision{
+  border-color:rgba(72,167,255,.20);
+  box-shadow:0 0 38px rgba(30,136,255,.10), var(--shadow-card);
+}
+
+@keyframes coreBreath{
+  0%,100%{
+    transform:scale(1);
+    box-shadow:
+      0 0 54px rgba(30,136,255,.46),
+      inset 0 0 34px rgba(255,255,255,.14);
+  }
+
+  50%{
+    transform:scale(1.035);
+    box-shadow:
+      0 0 74px rgba(30,136,255,.58),
+      inset 0 0 38px rgba(255,255,255,.18);
+  }
+}

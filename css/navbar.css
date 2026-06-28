@@ -1,0 +1,152 @@
+/*====================================================
+NAVBAR — NEXORA PREMIUM
+====================================================*/
+
+.navbar{
+  position:fixed;
+  top:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:min(1320px, calc(100% - 48px));
+  height:78px;
+  margin-top:18px;
+  padding:0 22px;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  background:rgba(5,8,22,.64);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  backdrop-filter:blur(26px);
+  box-shadow:0 20px 70px rgba(0,0,0,.38);
+  transition:var(--transition);
+}
+
+.navbar.scrolled{
+  height:70px;
+  margin-top:10px;
+  background:rgba(5,8,22,.78);
+  box-shadow:0 18px 60px rgba(0,0,0,.48);
+}
+
+.navbar-brand{
+  display:flex;
+  align-items:center;
+}
+
+.brand-logo{
+  width:138px;
+  height:auto;
+  display:block;
+  transition:var(--transition);
+}
+
+.navbar.scrolled .brand-logo{
+  width:126px;
+}
+
+.navbar-links{
+  display:flex;
+  align-items:center;
+  gap:28px;
+}
+
+.navbar-links a{
+  position:relative;
+  color:var(--nx-text-light);
+  font-size:14px;
+  font-weight:600;
+  transition:var(--transition);
+}
+
+.navbar-links a::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-8px;
+  height:2px;
+  border-radius:999px;
+  background:var(--gradient-primary);
+  transform:scaleX(0);
+  transform-origin:center;
+  transition:var(--transition);
+}
+
+.navbar-links a:hover{
+  color:var(--nx-white);
+}
+
+.navbar-links a:hover::after{
+  transform:scaleX(1);
+}
+
+.navbar-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+
+.language-switch{
+  display:flex;
+  align-items:center;
+  gap:4px;
+  padding:4px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  background:rgba(255,255,255,.04);
+}
+
+.language-switch button{
+  padding:7px 10px;
+  border-radius:999px;
+  background:transparent;
+  color:var(--nx-text-light);
+  font-size:12px;
+  font-weight:700;
+}
+
+.language-switch button.active{
+  background:rgba(30,136,255,.18);
+  color:var(--nx-white);
+  box-shadow:0 0 18px rgba(30,136,255,.25);
+}
+
+.nav-cta{
+  position:relative;
+  overflow:hidden;
+  height:42px;
+  padding:0 18px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:999px;
+  color:var(--nx-white);
+  font-size:14px;
+  font-weight:800;
+  background:var(--gradient-primary);
+  box-shadow:0 0 28px rgba(30,136,255,.35);
+  transition:var(--transition);
+}
+
+.nav-cta::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-110%;
+  width:70%;
+  height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,.36), transparent);
+  transform:skewX(-18deg);
+  transition:.7s ease;
+}
+
+.nav-cta:hover{
+  transform:translateY(-2px);
+  box-shadow:0 0 46px rgba(30,136,255,.58);
+}
+
+.nav-cta:hover::after{
+  left:130%;
+}
