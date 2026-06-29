@@ -411,25 +411,55 @@
 .orb-core{
   position:relative;
   z-index:3;
+
   width:156px;
   height:156px;
-  border-radius:38px;
+
   display:flex;
   flex-direction:column;
   align-items:center;
   justify-content:center;
+
   gap:6px;
-  background:linear-gradient(135deg, rgba(255,255,255,.32), rgba(30,136,255,.30), rgba(124,58,237,.20));
-  border:1px solid rgba(255,255,255,.24);
+
+  border-radius:38px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,.36),
+      rgba(30,136,255,.32),
+      rgba(124,58,237,.22)
+    );
+
+  border:1px solid rgba(255,255,255,.28);
+
   box-shadow:
-    0 0 68px rgba(30,136,255,.54),
-    inset 0 0 38px rgba(255,255,255,.16);
+    0 0 38px rgba(30,136,255,.32),
+    0 0 82px rgba(30,136,255,.22),
+    inset 0 0 42px rgba(255,255,255,.18);
+
+  backdrop-filter:blur(18px);
+
+  overflow:hidden;
+
+  isolation:isolate;
+
+  will-change:transform, box-shadow;
 }
 
 .orb-core img{
   width:164px;
   height:auto;
-  filter:drop-shadow(0 0 28px rgba(30,136,255,.72));
+
+  filter:
+    drop-shadow(0 0 12px rgba(255,255,255,.18))
+    drop-shadow(0 0 24px rgba(30,136,255,.52))
+    drop-shadow(0 0 42px rgba(30,136,255,.36));
+
+  animation:nxLogoBreathing 7s ease-in-out infinite;
+
+  will-change:filter, transform;
 }
 
 /*=========================================

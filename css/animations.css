@@ -150,3 +150,25 @@ RC2.4 — Motion Foundation
     transition-duration:.01ms !important;
   }
 }
+
+/*====================================================
+NXHERO PREMIUM — LOGO BREATHING
+====================================================*/
+
+@keyframes nxLogoBreathing{
+  0%,100%{
+    transform:scale(1);
+    filter:
+      drop-shadow(0 0 12px rgba(255,255,255,.18))
+      drop-shadow(0 0 24px rgba(30,136,255,.52))
+      drop-shadow(0 0 42px rgba(30,136,255,.36));
+  }
+
+  50%{
+    transform:scale(1.025);
+    filter:
+      drop-shadow(0 0 16px rgba(255,255,255,.24))
+      drop-shadow(0 0 32px rgba(30,136,255,.68))
+      drop-shadow(0 0 58px rgba(30,136,255,.46));
+  }
+}
