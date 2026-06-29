@@ -247,32 +247,36 @@ RC2 — AJUSTE NEXORA CORE MOBILE
   }
 
   .hero-visual{
-    min-height:420px;
+    min-height:440px;
   }
 
   .orb{
-    width:300px;
-    height:300px;
+    width:330px;
+    height:330px;
+    margin:0 auto;
   }
 
   .orb-core{
-    width:138px;
-    height:138px;
-    border-radius:34px;
-    gap:4px;
+    width:156px;
+    height:156px;
+    border-radius:38px;
+    gap:6px;
     padding:10px;
   }
 
   .orb-core img{
-    width:104px;
+    width:124px;
   }
 
   .orb-core span{
     display:block;
-    margin-top:-2px;
-    font-size:9px;
-    letter-spacing:.16em;
+    margin-top:2px;
+    font-size:10px;
+    font-weight:900;
+    letter-spacing:.22em;
     line-height:1;
-    opacity:.88;
+    text-align:center;
+    opacity:.92;
   }
+
 }
