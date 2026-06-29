@@ -424,9 +424,9 @@
 }
 
 .orb-core img{
-  width:112px;
+  width:155px;
   height:auto;
-  filter:drop-shadow(0 0 18px rgba(30,136,255,.55));
+  filter:drop-shadow(0 0 24px rgba(30,136,255,.65));
 }
 
 /*=========================================
@@ -716,5 +716,166 @@ RELEASE 1.0 RC1 — HERO FREEZE POLISH
     box-shadow:
       0 0 74px rgba(30,136,255,.58),
       inset 0 0 38px rgba(255,255,255,.18);
+  }
+}
+
+/*====================================================
+  MOBILE FIX — NEXORA CORE ORBIT
+  Mantém desktop premium e reorganiza o visual no celular
+====================================================*/
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: auto;
+    padding-top: 110px;
+    padding-bottom: 70px;
+    overflow: hidden;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .build-status,
+  .hero-actions,
+  .hero-meta {
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+  }
+
+  .hero-proof {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual {
+    min-height: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    padding: 24px 0 0;
+  }
+
+  .hero-visual::before,
+  .orb::before,
+  .orb::after,
+  .orb-ring,
+  .orbit-card::after {
+    display: none;
+  }
+
+  .orb {
+    order: 4;
+    width: 190px;
+    height: 190px;
+    margin: 10px auto 18px;
+  }
+
+  .orb-core {
+    width: 118px;
+    height: 118px;
+    border-radius: 30px;
+  }
+
+  .orb-core img {
+    width: 86px;
+  }
+
+  .orb-core span {
+    font-size: 8px;
+    letter-spacing: .14em;
+  }
+
+  .floating-card,
+  .orbit-card,
+  .card-analytics,
+  .card-intelligence,
+  .card-knowledge,
+  .card-decision,
+  .card-automation,
+  .card-twin {
+    position: relative;
+    inset: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    width: 100%;
+    min-height: auto;
+    transform: none;
+    animation: none;
+  }
+
+  .orbit-card {
+    padding: 18px 20px;
+    border-radius: 20px;
+    background: rgba(9, 17, 31, .82);
+  }
+
+  .orbit-card span {
+    font-size: 11px;
+  }
+
+  .orbit-card strong {
+    font-size: 17px;
+    line-height: 1.35;
+  }
+
+  .card-analytics {
+    order: 1;
+  }
+
+  .card-intelligence {
+    order: 2;
+  }
+
+  .card-knowledge {
+    order: 3;
+  }
+
+  .card-decision {
+    order: 5;
+  }
+
+  .card-automation {
+    order: 6;
+  }
+
+  .card-twin {
+    order: 7;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding-top: 96px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero p {
+    font-size: 17px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .build-status {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 }

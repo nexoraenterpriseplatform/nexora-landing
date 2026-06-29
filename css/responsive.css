@@ -137,11 +137,11 @@ RESPONSIVE — NEXORA OFFICIAL WEBSITE
   }
 
   .orb-core img{
-    width:78px;
+    width:108px;
   }
 
   .floating-card{
-    display:none;
+    display:flex;
   }
 
   .hero-scroll-indicator{
@@ -188,7 +188,91 @@ RESPONSIVE — NEXORA OFFICIAL WEBSITE
 }
 
 @media (max-width:720px){
-  .orb-core span{
+
+  .digital-flow{
     display:none;
+  }
+
+  .hero-visual{
+    min-height:420px;
+  }
+
+  .orb{
+      width:310px;
+      height:310px;
+  }
+
+  .orb-core{
+      width:145px;
+      height:145px;
+      border-radius:34px;
+      gap:4px;
+      padding:10px;
+  }
+
+  .orb-core img{
+      width:115px;
+  }
+
+  .orb-core span{
+      display:block;
+      margin-top:-4px;
+      font-size:10px;
+      letter-spacing:.18em;
+      opacity:.88;
+  }
+
+}
+
+/*====================================================
+RC2 - MOBILE CLEANUP
+====================================================*/
+
+@media (max-width:720px){
+
+    .digital-flow{
+        display:none;
+    }
+
+}
+
+/*====================================================
+RC2 — AJUSTE NEXORA CORE MOBILE
+====================================================*/
+
+@media (max-width:720px){
+
+  .digital-flow{
+    display:none;
+  }
+
+  .hero-visual{
+    min-height:420px;
+  }
+
+  .orb{
+    width:300px;
+    height:300px;
+  }
+
+  .orb-core{
+    width:138px;
+    height:138px;
+    border-radius:34px;
+    gap:4px;
+    padding:10px;
+  }
+
+  .orb-core img{
+    width:104px;
+  }
+
+  .orb-core span{
+    display:block;
+    margin-top:-2px;
+    font-size:9px;
+    letter-spacing:.16em;
+    line-height:1;
+    opacity:.88;
   }
 }
