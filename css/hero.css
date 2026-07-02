@@ -926,3 +926,317 @@ RELEASE 1.0 RC1 — HERO FREEZE POLISH
 /*====================================================
 RELEASE 1.0 RC2 — HERO PREMIUM
 ====================================================*/
+
+/*====================================================
+RC2.7.5 — HERO PREMIUM 3.0
+Arquivo: hero.css
+Objetivo: elevar o Hero como assinatura visual da NEXORA.
+====================================================*/
+
+.hero{
+  isolation:isolate;
+  background:
+    radial-gradient(circle at 78% 42%, rgba(30,136,255,.18), transparent 34%),
+    radial-gradient(circle at 88% 18%, rgba(124,58,237,.12), transparent 30%),
+    linear-gradient(180deg, rgba(5,8,22,.98), rgba(5,8,22,.92));
+}
+
+.hero::before{
+  background:
+    radial-gradient(circle at 74% 48%, rgba(30,136,255,.34), transparent 30%),
+    radial-gradient(circle at 82% 18%, rgba(124,58,237,.23), transparent 28%),
+    radial-gradient(circle at 18% 22%, rgba(30,136,255,.16), transparent 28%),
+    radial-gradient(circle at 50% 88%, rgba(30,136,255,.08), transparent 42%);
+  opacity:.95;
+}
+
+.hero::after{
+  opacity:.72;
+  background-size:82px 82px;
+  mask-image:linear-gradient(to bottom, black 0%, rgba(0,0,0,.78) 44%, transparent 86%);
+}
+
+.hero-content{
+  filter:drop-shadow(0 26px 70px rgba(0,0,0,.18));
+}
+
+.hero-tag{
+  border-color:rgba(72,167,255,.42);
+  background:
+    linear-gradient(180deg, rgba(30,136,255,.13), rgba(30,136,255,.065)),
+    rgba(255,255,255,.025);
+  box-shadow:
+    0 0 28px rgba(30,136,255,.16),
+    inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.hero-tag::before{
+  animation:nxHeroDotPulse 2.8s ease-in-out infinite;
+}
+
+.build-status{
+  border-color:rgba(255,255,255,.115);
+  background:rgba(255,255,255,.055);
+  box-shadow:
+    0 18px 46px rgba(0,0,0,.18),
+    inset 0 1px 0 rgba(255,255,255,.07);
+}
+
+.build-bar{
+  background:rgba(255,255,255,.12);
+}
+
+.build-bar i{
+  width:92%;
+  animation:nxBuildGlow 4s ease-in-out infinite;
+}
+
+.hero h1{
+  letter-spacing:-.055em;
+  line-height:.98;
+  text-wrap:balance;
+}
+
+.hero h1 span{
+  filter:drop-shadow(0 0 26px rgba(30,136,255,.15));
+}
+
+.hero p{
+  line-height:1.78;
+  letter-spacing:-.01em;
+}
+
+.hero-actions .btn{
+  min-height:58px;
+  transition:
+    transform .32s ease,
+    border-color .32s ease,
+    background .32s ease,
+    box-shadow .32s ease;
+}
+
+.btn-primary{
+  box-shadow:
+    0 0 38px rgba(30,136,255,.38),
+    0 16px 44px rgba(30,136,255,.16);
+}
+
+.btn-primary:hover{
+  transform:translateY(-4px) scale(1.015);
+  box-shadow:
+    0 0 64px rgba(30,136,255,.62),
+    0 20px 56px rgba(30,136,255,.22);
+}
+
+.btn-secondary{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.08),
+    0 16px 44px rgba(0,0,0,.18);
+}
+
+.btn-secondary:hover{
+  transform:translateY(-3px);
+  box-shadow:
+    0 0 44px rgba(30,136,255,.16),
+    inset 0 1px 0 rgba(255,255,255,.10);
+}
+
+.hero-meta span,
+.hero-proof div{
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.055),
+    0 12px 36px rgba(0,0,0,.16);
+}
+
+.hero-proof div{
+  transition:
+    transform .32s ease,
+    border-color .32s ease,
+    box-shadow .32s ease,
+    background .32s ease;
+}
+
+.hero-proof div:hover{
+  transform:translateY(-4px);
+  border-color:rgba(72,167,255,.25);
+  background:rgba(30,136,255,.065);
+  box-shadow:
+    0 20px 54px rgba(0,0,0,.26),
+    0 0 38px rgba(30,136,255,.10);
+}
+
+.hero-visual{
+  perspective:1200px;
+}
+
+.hero-visual::before{
+  width:720px;
+  height:720px;
+  background:
+    radial-gradient(circle, rgba(30,136,255,.18), transparent 56%),
+    conic-gradient(from 180deg, transparent, rgba(30,136,255,.24), transparent, rgba(124,58,237,.22), transparent);
+  filter:blur(5px);
+  opacity:.92;
+}
+
+.orb{
+  box-shadow:
+    0 0 115px rgba(30,136,255,.32),
+    0 0 220px rgba(124,58,237,.10),
+    inset 0 0 95px rgba(30,136,255,.14);
+  animation:orbBreathPremium 8s ease-in-out infinite;
+}
+
+.orb::before{
+  opacity:.88;
+  filter:blur(22px);
+}
+
+.orb-core{
+  border-color:rgba(255,255,255,.32);
+  box-shadow:
+    0 0 46px rgba(30,136,255,.40),
+    0 0 96px rgba(30,136,255,.26),
+    inset 0 0 44px rgba(255,255,255,.20);
+}
+
+.orb-core::before{
+  content:"";
+  position:absolute;
+  inset:-40%;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,.26), transparent);
+  transform:translateX(-70%) rotate(18deg);
+  animation:nxCoreShine 8s ease-in-out infinite;
+  pointer-events:none;
+  z-index:-1;
+}
+
+.orb-core img{
+  width:166px;
+}
+
+.floating-card{
+  border-color:rgba(72,167,255,.20);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.082), rgba(255,255,255,.026)),
+    rgba(9,17,31,.82);
+  box-shadow:
+    0 24px 68px rgba(0,0,0,.38),
+    0 0 40px rgba(30,136,255,.13),
+    inset 0 1px 0 rgba(255,255,255,.09);
+  transition:
+    transform .36s ease,
+    border-color .36s ease,
+    box-shadow .36s ease,
+    background .36s ease;
+}
+
+.floating-card:hover{
+  border-color:rgba(72,167,255,.42);
+  background:
+    linear-gradient(135deg, rgba(30,136,255,.12), rgba(124,58,237,.055)),
+    rgba(9,17,31,.86);
+  box-shadow:
+    0 28px 78px rgba(0,0,0,.44),
+    0 0 56px rgba(30,136,255,.18),
+    inset 0 1px 0 rgba(255,255,255,.11);
+}
+
+.orbit-card::after{
+  opacity:.70;
+}
+
+@keyframes nxHeroDotPulse{
+  0%,100%{
+    transform:scale(1);
+    opacity:.82;
+    box-shadow:0 0 18px var(--nx-primary);
+  }
+
+  50%{
+    transform:scale(1.35);
+    opacity:1;
+    box-shadow:
+      0 0 20px rgba(30,136,255,.72),
+      0 0 34px rgba(30,136,255,.34);
+  }
+}
+
+@keyframes nxBuildGlow{
+  0%,100%{
+    filter:saturate(1);
+    box-shadow:0 0 18px rgba(30,136,255,.48);
+  }
+
+  50%{
+    filter:saturate(1.25);
+    box-shadow:
+      0 0 22px rgba(30,136,255,.70),
+      0 0 38px rgba(124,58,237,.28);
+  }
+}
+
+@keyframes orbBreathPremium{
+  0%,100%{
+    transform:scale(1) rotate(0deg);
+    filter:saturate(1);
+  }
+
+  50%{
+    transform:scale(1.026) rotate(.18deg);
+    filter:saturate(1.16);
+  }
+}
+
+@keyframes nxCoreShine{
+  0%,68%,100%{
+    transform:translateX(-80%) rotate(18deg);
+    opacity:0;
+  }
+
+  76%{
+    opacity:.7;
+  }
+
+  88%{
+    transform:translateX(80%) rotate(18deg);
+    opacity:0;
+  }
+}
+
+@media (prefers-reduced-motion:reduce){
+  .hero-tag::before,
+  .build-bar i,
+  .orb,
+  .orb-core,
+  .orb-core::before,
+  .orb-core img{
+    animation:none;
+  }
+
+  .hero-proof div:hover,
+  .btn-primary:hover,
+  .btn-secondary:hover{
+    transform:none;
+  }
+}
+
+@media (max-width:768px){
+  .hero h1{
+    letter-spacing:-.045em;
+  }
+
+  .orb{
+    animation:none;
+  }
+
+  .hero-proof div:hover{
+    transform:none;
+  }
+}
+
+@media (max-width:480px){
+  .hero h1{
+    line-height:1.02;
+  }
+}

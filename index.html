@@ -70,7 +70,19 @@
   </script>
 </head>
 
-<body>
+<body class="nx-ambient">
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- =====================================================
+  RC2.7.4 — AMBIENT EXPERIENCE LAYER
+  Camada visual não-interativa para atmosfera premium.
+  ====================================================== -->
+  <div class="ambient-layer" aria-hidden="true">
+    <span class="ambient-orb ambient-orb-primary"></span>
+    <span class="ambient-orb ambient-orb-secondary"></span>
+    <span class="ambient-orb ambient-orb-accent"></span>
+  </div>
+
   <a class="skip-link" href="#main-content">Pular para o conteúdo principal</a>
 
   <div class="page-wrapper">
@@ -152,7 +164,7 @@
               <span>Construída para evoluir sem retrabalho.</span>
             </div>
           </div>
-</div>
+        </div>
 
         <div class="hero-visual reveal active" aria-hidden="true">
           <div class="orb">
@@ -200,6 +212,10 @@
     </header>
 
     <main id="main-content">
+      <!-- =====================================================
+      NEXORA LANDING — RC2.7.4 AMBIENT EXPERIENCE READY
+      ====================================================== -->
+
       <!-- =====================================================
       CHAPTER 01 — THE REALITY
       ====================================================== -->
@@ -586,44 +602,44 @@
           </div>
 
           <div class="timeline reveal" aria-label="Linha do tempo pública da NEXORA">
-            <div class="timeline-item">
-              <span>✓</span>
+            <div class="timeline-item release-done">
+              <span class="release-status" aria-label="Concluído">✓</span>
               <strong>RC2.1 · Foundation</strong>
               <p>Estrutura base do Website, identidade visual inicial e primeiros componentes.</p>
             </div>
 
-            <div class="timeline-item">
-              <span>✓</span>
+            <div class="timeline-item release-done">
+              <span class="release-status" aria-label="Concluído">✓</span>
               <strong>RC2.2 · Intelligence Experience</strong>
               <p>NEXORA Intelligence Core, Motion Foundation e experiência visual premium.</p>
             </div>
 
-            <div class="timeline-item">
-              <span>✓</span>
+            <div class="timeline-item release-done">
+              <span class="release-status" aria-label="Concluído">✓</span>
               <strong>RC2.3 · Global Experience</strong>
               <p>NEXORA Global, The Beginning e posicionamento internacional da marca.</p>
             </div>
 
-            <div class="timeline-item">
-              <span>✓</span>
+            <div class="timeline-item release-done">
+              <span class="release-status" aria-label="Concluído">✓</span>
               <strong>RC2.4 · NXHero Premium</strong>
               <p>Hero refinado, Motion Library, Design Tokens e validação desktop/mobile.</p>
             </div>
 
-            <div class="timeline-item">
-              <span>✓</span>
+            <div class="timeline-item release-done">
+              <span class="release-status" aria-label="Concluído">✓</span>
               <strong>RC2.5 · Storytelling Experience</strong>
               <p>Narrativa por capítulos, confiança institucional e experiência documental.</p>
             </div>
 
-            <div class="timeline-item">
-              <span>●</span>
+            <div class="timeline-item release-done">
+              <span class="release-status" aria-label="Concluído">✓</span>
               <strong>RC2.6 · Brand Experience</strong>
               <p>Consolidação da identidade visual, linguagem de marca e base do Design System.</p>
             </div>
 
-            <div class="timeline-item">
-              <span>○</span>
+            <div class="timeline-item release-current">
+              <span class="release-status" aria-label="Próxima fase">◉</span>
               <strong>RC3 · Website Application</strong>
               <p>Expansão futura para páginas institucionais, roadmap, releases e arquitetura Next.js.</p>
             </div>
@@ -1325,8 +1341,8 @@
           </p>
 
           <div class="footer-badges">
-            <span>Website RC2.6 v5</span>
-            <span>Brand Experience</span>
+            <span>Website RC2.7.4 v2</span>
+            <span>Ambient Experience</span>
             <span>Made in Brazil</span>
           </div>
         </div>
@@ -1373,7 +1389,7 @@
 
         <div class="footer-column">
           <h4>Contato</h4>
-          <a href="mailto:contato@nexora.ai">contato@nexora.ai</a>
+          <a href="mailto:nexoraenterpriseplatform@gmail.com">nexoraenterpriseplatform@gmail.com</a>
           <a href="#home">LinkedIn</a>
           <a href="#home">GitHub</a>
           <a href="#beta">Programa Beta</a>

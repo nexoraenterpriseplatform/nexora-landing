@@ -1,20 +1,65 @@
-console.log("NEXORA Official Website — Release 0.9.1 carregada.");
+/*====================================================
+NEXORA WEBSITE
+RC2.7.4 — MAIN ENGINE
+====================================================*/
+
+console.log("NEXORA Official Website — RC2.7.4 Ambient Experience carregada.");
+
+/*====================================================
+ELEMENTOS
+====================================================*/
 
 const navbar = document.querySelector(".navbar");
 
-function handleNavbarScroll(){
+/*====================================================
+NAVBAR
+====================================================*/
+
+function handleNavbarScroll() {
+
   if (!navbar) return;
 
   if (window.scrollY > 24) {
+
     navbar.classList.add("scrolled");
+
   } else {
+
     navbar.classList.remove("scrolled");
+
   }
+
 }
 
-window.addEventListener("scroll", handleNavbarScroll);
-handleNavbarScroll();
+/*====================================================
+PAGE LOADED
+====================================================*/
 
-window.addEventListener("load", () => {
+function initializeWebsite() {
+
   document.body.classList.add("page-loaded");
-});
+
+  handleNavbarScroll();
+
+}
+
+/*====================================================
+WINDOW EVENTS
+====================================================*/
+
+window.addEventListener(
+  "scroll",
+  handleNavbarScroll,
+  { passive: true }
+);
+
+window.addEventListener(
+  "load",
+  initializeWebsite
+);
+
+/*====================================================
+INITIAL STATE
+====================================================*/
+
+initializeWebsite();
